@@ -19,7 +19,7 @@ This guide shows how to add the **secure-access-reports** skill to Claude so it 
 
 ## Step 1 – Download the skill
 
-1. Open the [latest release](https://github.com/orcohe-Cisco/Secure-Access-Reports/releases/latest).
+1. Open the [latest release]([https://github.com/orcohe-Cisco/Secure-Access-Reports/releases/latest](https://github.com/orcohe-Cisco/Cisco-SSE/blob/main/secure-access-reports/secure-access-reports.zip)).
 2. Under **Assets**, download **`secure-access-reports.zip`**.
 3. Keep it as a ZIP; don't unzip it.
 
