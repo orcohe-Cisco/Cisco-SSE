@@ -1,0 +1,506 @@
+{
+  "lang": "en",
+  "report": {
+    "title": "Executive Security Report",
+    "subtitle": "Monthly review of internet, private access and network security",
+    "customer": "Contoso Ltd.",
+    "period_label": "8 Sep – 7 Oct 2026 (30 days)",
+    "generated_on": "2026-10-08",
+    "prepared_by": "Jordan Levi, Security Solutions Engineer",
+    "classification": "Confidential"
+  },
+  "posture": {
+    "level": "watch",
+    "headline": "Secure Access inspected 37.8M requests and blocked 87K (0.23%). Protection is effective, but one branch tunnel runs without redundancy and 14% of laptops use an outdated client."
+  },
+  "summary": [
+    "Threat exposure is contained: 1,912 malware and phishing requests were blocked, with no allowed traffic to security categories.",
+    "A phishing wave on 23–24 September tripled daily blocks; all requests were stopped at the DNS layer before a connection was made.",
+    "The Haifa branch tunnel is running on its primary hub only; a hub failure would leave the site unprotected.",
+    "Zero Trust access now serves 9 private applications for 410 users; the ERP portal carries 61% of sessions.",
+    "Three actions are recommended this quarter, led by restoring tunnel redundancy and standardizing the client version."
+  ],
+  "kpis": [
+    {
+      "label": "Requests inspected",
+      "value": 37786642
+    },
+    {
+      "label": "Requests blocked",
+      "value": 87223
+    },
+    {
+      "label": "Block rate",
+      "value": 0.231,
+      "format": "percent"
+    },
+    {
+      "label": "Threats blocked",
+      "value": 1912,
+      "format": "int",
+      "tone": "warn",
+      "note": "Malware, phishing, C2"
+    },
+    {
+      "label": "Identities protected",
+      "value": 1386,
+      "format": "int"
+    },
+    {
+      "label": "Private apps (ZTNA)",
+      "value": 9,
+      "format": "int"
+    },
+    {
+      "label": "Tunnel hubs up",
+      "value": "5 / 6",
+      "tone": "bad",
+      "note": "Haifa secondary down"
+    },
+    {
+      "label": "Clients on current version",
+      "value": "86%",
+      "tone": "warn"
+    }
+  ],
+  "insights": {
+    "trend": "Weekday volume is stable at about 1.5M requests a day and growing slowly. The block spike on 23–24 September matches a phishing campaign, not a policy change.",
+    "layers": "DNS stops most threats before a connection is made; the web proxy catches the remainder inside allowed sites, which is the intended layered design.",
+    "threats": "Phishing dominated the month. No command-and-control callbacks were allowed, and the two infected-host signals were contained at DNS.",
+    "usage": "Business SaaS and collaboration lead usage. Generative AI is now a top-10 category, which warrants an explicit usage policy.",
+    "users": "Branch networks generate the most traffic. Private-app use is concentrated on the ERP portal and engineering Git.",
+    "infra": "Four of five tunnels are fully redundant. Client versions drift on unmanaged laptops."
+  },
+  "findings": [
+    {
+      "severity": "high",
+      "title": "Branch tunnel without redundancy",
+      "detail": "Haifa-FTD has run on its primary hub only since 29 September. A single failure would remove protection for the site's ~120 users."
+    },
+    {
+      "severity": "medium",
+      "title": "Phishing campaign on 23–24 September",
+      "detail": "1,104 requests to 37 newly seen phishing domains were blocked, 71% from the Finance network."
+    },
+    {
+      "severity": "medium",
+      "title": "Outdated Secure Client on 14% of laptops",
+      "detail": "58 of 412 roaming clients run 5.0.x, which lacks the latest ZTNA module fixes."
+    },
+    {
+      "severity": "low",
+      "title": "Generative AI use without a policy",
+      "detail": "84K requests to Generative AI services from 290 users; no content or DLP controls are applied."
+    },
+    {
+      "severity": "info",
+      "title": "No successful malware connections",
+      "detail": "All 1,912 security-category requests were blocked; no allowed traffic to malware, phishing or C2 categories."
+    }
+  ],
+  "trend": {
+    "series": [
+      {
+        "date": "2026-09-08",
+        "total": 1409129,
+        "blocked": 2424
+      },
+      {
+        "date": "2026-09-09",
+        "total": 1490956,
+        "blocked": 2471
+      },
+      {
+        "date": "2026-09-10",
+        "total": 1469991,
+        "blocked": 2782
+      },
+      {
+        "date": "2026-09-11",
+        "total": 1363625,
+        "blocked": 2735
+      },
+      {
+        "date": "2026-09-12",
+        "total": 489223,
+        "blocked": 952
+      },
+      {
+        "date": "2026-09-13",
+        "total": 493896,
+        "blocked": 826
+      },
+      {
+        "date": "2026-09-14",
+        "total": 1466868,
+        "blocked": 3317
+      },
+      {
+        "date": "2026-09-15",
+        "total": 1400878,
+        "blocked": 2491
+      },
+      {
+        "date": "2026-09-16",
+        "total": 1526910,
+        "blocked": 3600
+      },
+      {
+        "date": "2026-09-17",
+        "total": 1520731,
+        "blocked": 2915
+      },
+      {
+        "date": "2026-09-18",
+        "total": 1622910,
+        "blocked": 2657
+      },
+      {
+        "date": "2026-09-19",
+        "total": 574016,
+        "blocked": 1051
+      },
+      {
+        "date": "2026-09-20",
+        "total": 513941,
+        "blocked": 870
+      },
+      {
+        "date": "2026-09-21",
+        "total": 1478657,
+        "blocked": 3331
+      },
+      {
+        "date": "2026-09-22",
+        "total": 1452980,
+        "blocked": 3000
+      },
+      {
+        "date": "2026-09-23",
+        "total": 1571161,
+        "blocked": 10135
+      },
+      {
+        "date": "2026-09-24",
+        "total": 1554585,
+        "blocked": 8721
+      },
+      {
+        "date": "2026-09-25",
+        "total": 1439479,
+        "blocked": 2540
+      },
+      {
+        "date": "2026-09-26",
+        "total": 573529,
+        "blocked": 1113
+      },
+      {
+        "date": "2026-09-27",
+        "total": 542881,
+        "blocked": 1122
+      },
+      {
+        "date": "2026-09-28",
+        "total": 1554269,
+        "blocked": 2859
+      },
+      {
+        "date": "2026-09-29",
+        "total": 1645832,
+        "blocked": 3553
+      },
+      {
+        "date": "2026-09-30",
+        "total": 1513005,
+        "blocked": 3116
+      },
+      {
+        "date": "2026-10-01",
+        "total": 1589783,
+        "blocked": 3656
+      },
+      {
+        "date": "2026-10-02",
+        "total": 1647541,
+        "blocked": 3015
+      },
+      {
+        "date": "2026-10-03",
+        "total": 615945,
+        "blocked": 1043
+      },
+      {
+        "date": "2026-10-04",
+        "total": 566559,
+        "blocked": 1249
+      },
+      {
+        "date": "2026-10-05",
+        "total": 1517140,
+        "blocked": 3020
+      },
+      {
+        "date": "2026-10-06",
+        "total": 1493522,
+        "blocked": 3188
+      },
+      {
+        "date": "2026-10-07",
+        "total": 1686700,
+        "blocked": 3471
+      }
+    ]
+  },
+  "layers": [
+    {
+      "name": "DNS",
+      "requests": 17381855,
+      "blocked": 35761
+    },
+    {
+      "name": "Web proxy (SWG)",
+      "requests": 11713859,
+      "blocked": 32272
+    },
+    {
+      "name": "Firewall / IPS",
+      "requests": 8690928,
+      "blocked": 19190
+    }
+  ],
+  "threats": {
+    "items": [
+      {
+        "name": "Phishing",
+        "type": "Security category",
+        "count": 1104
+      },
+      {
+        "name": "Malware",
+        "type": "Security category",
+        "count": 486
+      },
+      {
+        "name": "Newly seen domains",
+        "type": "Security category",
+        "count": 201
+      },
+      {
+        "name": "Command and control",
+        "type": "Security category",
+        "count": 74
+      },
+      {
+        "name": "Cryptomining",
+        "type": "Security category",
+        "count": 47
+      }
+    ],
+    "event_types": [
+      {
+        "name": "Domain security",
+        "count": 1388
+      },
+      {
+        "name": "URL security",
+        "count": 431
+      },
+      {
+        "name": "File (AMP)",
+        "count": 93
+      }
+    ]
+  },
+  "ips": [
+    {
+      "signature": "1:58722",
+      "description": "Server-side exploit attempt",
+      "blocked": 2140,
+      "last_seen": "2026-10-06"
+    },
+    {
+      "signature": "1:41978",
+      "description": "Protocol anomaly",
+      "blocked": 612,
+      "last_seen": "2026-10-07"
+    }
+  ],
+  "categories": [
+    {
+      "name": "SaaS and B2B",
+      "count": 9120000
+    },
+    {
+      "name": "Computers and Internet",
+      "count": 7460000
+    },
+    {
+      "name": "Collaboration",
+      "count": 4310000
+    },
+    {
+      "name": "Cloud and Data Centers",
+      "count": 3880000
+    },
+    {
+      "name": "Business and Industry",
+      "count": 2140000
+    },
+    {
+      "name": "News",
+      "count": 1210000
+    },
+    {
+      "name": "Software Updates",
+      "count": 990000
+    },
+    {
+      "name": "Generative AI",
+      "count": 84000
+    }
+  ],
+  "destinations": [
+    {
+      "name": "login.microsoftonline.com",
+      "requests": 3920000
+    },
+    {
+      "name": "teams.microsoft.com",
+      "requests": 2810000
+    },
+    {
+      "name": "contoso.sharepoint.com",
+      "requests": 2150000
+    },
+    {
+      "name": "api.salesforce.com",
+      "requests": 980000
+    },
+    {
+      "name": "github.com",
+      "requests": 610000
+    }
+  ],
+  "identities": [
+    {
+      "name": "Tel Aviv HQ",
+      "type": "Network tunnel",
+      "requests": 12400000,
+      "blocked": 3120
+    },
+    {
+      "name": "Haifa branch",
+      "type": "Network tunnel",
+      "requests": 6810000,
+      "blocked": 2210
+    },
+    {
+      "name": "Finance network",
+      "type": "Internal network",
+      "requests": 3020000,
+      "blocked": 1840
+    },
+    {
+      "name": "Remote users",
+      "type": "Roaming clients",
+      "requests": 2950000,
+      "blocked": 1130
+    },
+    {
+      "name": "Data center",
+      "type": "Network tunnel",
+      "requests": 1410000,
+      "blocked": 240
+    }
+  ],
+  "private_apps": [
+    {
+      "name": "ERP portal",
+      "count": 18420
+    },
+    {
+      "name": "Engineering Git",
+      "count": 6110
+    },
+    {
+      "name": "HR system",
+      "count": 2240
+    },
+    {
+      "name": "File server (SMB)",
+      "count": 1520
+    },
+    {
+      "name": "Jump host (RDP)",
+      "count": 740
+    }
+  ],
+  "infrastructure": {
+    "tunnels": [
+      {
+        "name": "TLV-HQ-FTD",
+        "type": "FTD",
+        "status": "Connected",
+        "hubs_up": "2 / 2"
+      },
+      {
+        "name": "Haifa-FTD",
+        "type": "FTD",
+        "status": "Degraded",
+        "hubs_up": "1 / 2"
+      },
+      {
+        "name": "Azure-Prod",
+        "type": "Azure S2S VPN",
+        "status": "Connected",
+        "hubs_up": "2 / 2"
+      }
+    ],
+    "roaming": [
+      {
+        "name": "412 roaming clients",
+        "os": "Windows / macOS",
+        "status": "Protected",
+        "version": "354 on 5.1.20"
+      },
+      {
+        "name": "58 clients",
+        "os": "Windows",
+        "status": "Outdated",
+        "version": "5.0.x"
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "priority": "P1",
+      "action": "Restore the secondary hub on Haifa-FTD",
+      "rationale": "Removes a single point of failure for a 120-user site.",
+      "owner": "Network team"
+    },
+    {
+      "priority": "P2",
+      "action": "Upgrade Secure Client to 5.1.20 on all laptops",
+      "rationale": "Closes ZTNA module gaps and simplifies support.",
+      "owner": "Endpoint team"
+    },
+    {
+      "priority": "P2",
+      "action": "Run a phishing-awareness refresh for Finance",
+      "rationale": "71% of blocked phishing came from one department.",
+      "owner": "Security awareness"
+    },
+    {
+      "priority": "P3",
+      "action": "Publish a Generative AI usage policy with DLP controls",
+      "rationale": "Use is growing and currently unmonitored for sensitive data.",
+      "owner": "CISO office"
+    }
+  ],
+  "methodology": [
+    "Data source: Cisco Secure Access Reports, Policies and Deployments APIs.",
+    "Period: 8 September – 7 October 2026 (30 full days, Israel time). Counts are platform estimates.",
+    "This example uses fictional data for illustration."
+  ]
+}

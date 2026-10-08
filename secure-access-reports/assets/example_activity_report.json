@@ -1,0 +1,1612 @@
+{
+  "lang": "en",
+  "report": {
+    "title": "Workforce Connectivity Report",
+    "subtitle": "Remote work and connectivity patterns, two-week review",
+    "eyebrow": "Cisco Secure Access",
+    "customer": "Contoso Ltd.",
+    "period_label": "20 Sep – 3 Oct 2026 (10 workdays)",
+    "generated_on": "2026-10-08",
+    "prepared_by": "IT Operations",
+    "classification": "Confidential – HR and management only"
+  },
+  "posture": {
+    "headline": "Nine of ten employees connected on every workday they were scheduled; remote work averages 7 of 10 workdays, with typical active hours between 08:00 and 17:00."
+  },
+  "summary": [
+    "Connectivity is consistent: every employee except one on leave from 27 September connected on all scheduled workdays.",
+    "Hybrid patterns are visible: Finance and Operations staff work in the office on Sundays and Wednesdays, the rest of the week remotely.",
+    "One device (Operations) produces identical traffic day and night, so its activity cannot be separated from background and is marked not measurable.",
+    "Two people show patterns worth a conversation rather than a conclusion: a consistently short active day and a late schedule with weekend check-ins."
+  ],
+  "insights": {
+    "act_grid": "Each cell is one day. Dark cells are days with clear activity; light cells are days the device was online without activity above its background level.",
+    "act_table": "Listed by department and name. Figures describe connectivity patterns and should be read with each role's schedule in mind."
+  },
+  "methodology": [
+    "Data source: Cisco Secure Access Reports API, request totals per identity in 2-hour windows. No browsing destinations were collected.",
+    "Identities (laptops, directory accounts) were mapped to employees using an IT-provided list.",
+    "Workweek: Sunday to Thursday. Time zone: Asia/Jerusalem.",
+    "This example uses fictional data for illustration."
+  ],
+  "activity": {
+    "period": {
+      "from": "2026-09-20",
+      "to": "2026-10-03",
+      "tz": "Asia/Jerusalem",
+      "bucket_hours": 2.0,
+      "workdays": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "sun"
+      ],
+      "dates": [
+        "2026-09-20",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-03"
+      ]
+    },
+    "settings": {
+      "connected_min_per_hour": 5,
+      "active_min_per_hour": 30,
+      "baseline_multiplier": 3.0,
+      "night_hours": "0-5"
+    },
+    "summary": {
+      "people": 10,
+      "workdays": 10,
+      "connected_all_workdays": 8,
+      "never_connected": 0,
+      "avg_remote_days": 7.5,
+      "avg_connected_hours": 19.4,
+      "avg_active_hours": 9.8,
+      "measurable": 9,
+      "windows_received": 168,
+      "windows_expected": 168
+    },
+    "people": [
+      {
+        "name": "Amit Shalev",
+        "department": "Engineering",
+        "identities": [
+          {
+            "label": "LT-ASHALEV",
+            "type": "anyconnect",
+            "location": "remote",
+            "baseline_per_hour": 36.2,
+            "signal": "ok"
+          },
+          {
+            "label": "amit@contoso.com",
+            "type": "directory_user",
+            "location": "unknown",
+            "baseline_per_hour": 0.0,
+            "signal": "ok"
+          },
+          {
+            "label": "LT-ASHALEV",
+            "type": "ztna_client",
+            "location": "remote",
+            "baseline_per_hour": 0.0,
+            "signal": "ok"
+          }
+        ],
+        "signal": "ok",
+        "days": {
+          "2026-09-20": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-21": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-22": {
+            "status": "remote_active",
+            "connected_hours": 22.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-23": {
+            "status": "remote_active",
+            "connected_hours": 22.0,
+            "active_hours": 12.0,
+            "first": "06:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-24": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-25": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-09-26": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-09-27": {
+            "status": "remote_active",
+            "connected_hours": 24.0,
+            "active_hours": 12.0,
+            "first": "06:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-28": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-29": {
+            "status": "remote_active",
+            "connected_hours": 18.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-30": {
+            "status": "remote_active",
+            "connected_hours": 22.0,
+            "active_hours": 12.0,
+            "first": "06:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-10-01": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-10-02": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-10-03": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          }
+        },
+        "metrics": {
+          "workdays": 10,
+          "days_connected": 10,
+          "days_remote": 10,
+          "days_office": 0,
+          "days_active": 10,
+          "avg_connected_hours": 20.8,
+          "avg_active_hours": 10.6,
+          "avg_first": "07:24",
+          "avg_last": "18:00",
+          "offday_active_hours": 0,
+          "last_seen": "2026-10-02 00:00"
+        }
+      },
+      {
+        "name": "Maya Ben-David",
+        "department": "Engineering",
+        "identities": [
+          {
+            "label": "LT-MBENDAVID",
+            "type": "anyconnect",
+            "location": "remote",
+            "baseline_per_hour": 35.5,
+            "signal": "ok"
+          },
+          {
+            "label": "maya@contoso.com",
+            "type": "directory_user",
+            "location": "unknown",
+            "baseline_per_hour": 0.0,
+            "signal": "ok"
+          },
+          {
+            "label": "LT-MBENDAVID",
+            "type": "ztna_client",
+            "location": "remote",
+            "baseline_per_hour": 0.0,
+            "signal": "ok"
+          }
+        ],
+        "signal": "ok",
+        "days": {
+          "2026-09-20": {
+            "status": "remote_active",
+            "connected_hours": 24.0,
+            "active_hours": 10.0,
+            "first": "10:00",
+            "last": "20:00",
+            "workday": true
+          },
+          "2026-09-21": {
+            "status": "remote_active",
+            "connected_hours": 24.0,
+            "active_hours": 12.0,
+            "first": "08:00",
+            "last": "20:00",
+            "workday": true
+          },
+          "2026-09-22": {
+            "status": "remote_active",
+            "connected_hours": 18.0,
+            "active_hours": 10.0,
+            "first": "10:00",
+            "last": "20:00",
+            "workday": true
+          },
+          "2026-09-23": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 10.0,
+            "first": "10:00",
+            "last": "20:00",
+            "workday": true
+          },
+          "2026-09-24": {
+            "status": "remote_active",
+            "connected_hours": 18.0,
+            "active_hours": 10.0,
+            "first": "10:00",
+            "last": "20:00",
+            "workday": true
+          },
+          "2026-09-25": {
+            "status": "remote_active",
+            "connected_hours": 22.0,
+            "active_hours": 2.0,
+            "first": "20:00",
+            "last": "22:00",
+            "workday": false
+          },
+          "2026-09-26": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-09-27": {
+            "status": "remote_active",
+            "connected_hours": 22.0,
+            "active_hours": 12.0,
+            "first": "08:00",
+            "last": "20:00",
+            "workday": true
+          },
+          "2026-09-28": {
+            "status": "remote_active",
+            "connected_hours": 24.0,
+            "active_hours": 10.0,
+            "first": "10:00",
+            "last": "20:00",
+            "workday": true
+          },
+          "2026-09-29": {
+            "status": "remote_active",
+            "connected_hours": 18.0,
+            "active_hours": 10.0,
+            "first": "10:00",
+            "last": "20:00",
+            "workday": true
+          },
+          "2026-09-30": {
+            "status": "remote_active",
+            "connected_hours": 18.0,
+            "active_hours": 12.0,
+            "first": "08:00",
+            "last": "20:00",
+            "workday": true
+          },
+          "2026-10-01": {
+            "status": "remote_active",
+            "connected_hours": 22.0,
+            "active_hours": 10.0,
+            "first": "10:00",
+            "last": "20:00",
+            "workday": true
+          },
+          "2026-10-02": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-10-03": {
+            "status": "remote_active",
+            "connected_hours": 18.0,
+            "active_hours": 2.0,
+            "first": "20:00",
+            "last": "22:00",
+            "workday": false
+          }
+        },
+        "metrics": {
+          "workdays": 10,
+          "days_connected": 10,
+          "days_remote": 10,
+          "days_office": 0,
+          "days_active": 10,
+          "avg_connected_hours": 20.8,
+          "avg_active_hours": 10.6,
+          "avg_first": "09:24",
+          "avg_last": "20:00",
+          "offday_active_hours": 4.0,
+          "last_seen": "2026-10-04 00:00"
+        }
+      },
+      {
+        "name": "Noa Friedman",
+        "department": "Engineering",
+        "identities": [
+          {
+            "label": "noa@contoso.com",
+            "type": "directory_user",
+            "location": "unknown",
+            "baseline_per_hour": 0.0,
+            "signal": "ok"
+          }
+        ],
+        "signal": "ok",
+        "days": {
+          "2026-09-20": {
+            "status": "seen_active",
+            "connected_hours": 10.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-21": {
+            "status": "seen_active",
+            "connected_hours": 12.0,
+            "active_hours": 12.0,
+            "first": "06:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-22": {
+            "status": "seen_active",
+            "connected_hours": 10.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-23": {
+            "status": "seen_active",
+            "connected_hours": 10.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-24": {
+            "status": "seen_active",
+            "connected_hours": 10.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-25": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-09-26": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-09-27": {
+            "status": "seen_active",
+            "connected_hours": 10.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-28": {
+            "status": "seen_active",
+            "connected_hours": 10.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-29": {
+            "status": "seen_active",
+            "connected_hours": 12.0,
+            "active_hours": 12.0,
+            "first": "06:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-30": {
+            "status": "seen_active",
+            "connected_hours": 10.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-10-01": {
+            "status": "seen_active",
+            "connected_hours": 10.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-10-02": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-10-03": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          }
+        },
+        "metrics": {
+          "workdays": 10,
+          "days_connected": 10,
+          "days_remote": 0,
+          "days_office": 0,
+          "days_active": 10,
+          "avg_connected_hours": 10.4,
+          "avg_active_hours": 10.4,
+          "avg_first": "07:36",
+          "avg_last": "18:00",
+          "offday_active_hours": 0,
+          "last_seen": "2026-10-01 18:00"
+        }
+      },
+      {
+        "name": "Dana Levi",
+        "department": "Finance",
+        "identities": [
+          {
+            "label": "dana@contoso.com",
+            "type": "directory_user",
+            "location": "unknown",
+            "baseline_per_hour": 0.0,
+            "signal": "ok"
+          },
+          {
+            "label": "LT-DLEVI",
+            "type": "anyconnect",
+            "location": "remote",
+            "baseline_per_hour": 34.0,
+            "signal": "ok"
+          },
+          {
+            "label": "LT-DLEVI",
+            "type": "ztna_client",
+            "location": "remote",
+            "baseline_per_hour": 0.0,
+            "signal": "ok"
+          }
+        ],
+        "signal": "ok",
+        "days": {
+          "2026-09-20": {
+            "status": "seen_active",
+            "connected_hours": 12.0,
+            "active_hours": 12.0,
+            "first": "06:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-21": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-22": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 12.0,
+            "first": "06:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-23": {
+            "status": "seen_active",
+            "connected_hours": 10.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-24": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-25": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-09-26": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-09-27": {
+            "status": "seen_active",
+            "connected_hours": 12.0,
+            "active_hours": 12.0,
+            "first": "06:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-28": {
+            "status": "remote_active",
+            "connected_hours": 22.0,
+            "active_hours": 12.0,
+            "first": "06:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-29": {
+            "status": "remote_active",
+            "connected_hours": 24.0,
+            "active_hours": 12.0,
+            "first": "06:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-30": {
+            "status": "seen_active",
+            "connected_hours": 10.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-10-01": {
+            "status": "remote_active",
+            "connected_hours": 22.0,
+            "active_hours": 12.0,
+            "first": "06:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-10-02": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-10-03": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          }
+        },
+        "metrics": {
+          "workdays": 10,
+          "days_connected": 10,
+          "days_remote": 6,
+          "days_office": 0,
+          "days_active": 10,
+          "avg_connected_hours": 17.2,
+          "avg_active_hours": 11.2,
+          "avg_first": "06:48",
+          "avg_last": "18:00",
+          "offday_active_hours": 0,
+          "last_seen": "2026-10-02 00:00"
+        }
+      },
+      {
+        "name": "Yossi Cohen",
+        "department": "Finance",
+        "identities": [
+          {
+            "label": "LT-YCOHEN",
+            "type": "anyconnect",
+            "location": "remote",
+            "baseline_per_hour": 30.0,
+            "signal": "ok"
+          },
+          {
+            "label": "yossi@contoso.com",
+            "type": "directory_user",
+            "location": "unknown",
+            "baseline_per_hour": 0.0,
+            "signal": "ok"
+          },
+          {
+            "label": "LT-YCOHEN",
+            "type": "ztna_client",
+            "location": "remote",
+            "baseline_per_hour": 0.0,
+            "signal": "ok"
+          }
+        ],
+        "signal": "ok",
+        "days": {
+          "2026-09-20": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-21": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 12.0,
+            "first": "06:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-22": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-23": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-24": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-25": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-09-26": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-09-27": {
+            "status": "remote_active",
+            "connected_hours": 22.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-28": {
+            "status": "remote_active",
+            "connected_hours": 22.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-29": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-30": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-10-01": {
+            "status": "remote_active",
+            "connected_hours": 22.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-10-02": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-10-03": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          }
+        },
+        "metrics": {
+          "workdays": 10,
+          "days_connected": 10,
+          "days_remote": 10,
+          "days_office": 0,
+          "days_active": 10,
+          "avg_connected_hours": 20.6,
+          "avg_active_hours": 10.2,
+          "avg_first": "07:48",
+          "avg_last": "18:00",
+          "offday_active_hours": 0,
+          "last_seen": "2026-10-02 00:00"
+        }
+      },
+      {
+        "name": "Lior Azulay",
+        "department": "HR",
+        "identities": [
+          {
+            "label": "LT-LAZULAY",
+            "type": "anyconnect",
+            "location": "remote",
+            "baseline_per_hour": 25.5,
+            "signal": "ok"
+          },
+          {
+            "label": "lior@contoso.com",
+            "type": "directory_user",
+            "location": "unknown",
+            "baseline_per_hour": 0.0,
+            "signal": "ok"
+          },
+          {
+            "label": "LT-LAZULAY",
+            "type": "ztna_client",
+            "location": "remote",
+            "baseline_per_hour": 0.0,
+            "signal": "ok"
+          }
+        ],
+        "signal": "ok",
+        "days": {
+          "2026-09-20": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 6.0,
+            "first": "08:00",
+            "last": "14:00",
+            "workday": true
+          },
+          "2026-09-21": {
+            "status": "remote_active",
+            "connected_hours": 22.0,
+            "active_hours": 6.0,
+            "first": "08:00",
+            "last": "14:00",
+            "workday": true
+          },
+          "2026-09-22": {
+            "status": "remote_active",
+            "connected_hours": 22.0,
+            "active_hours": 6.0,
+            "first": "08:00",
+            "last": "14:00",
+            "workday": true
+          },
+          "2026-09-23": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 6.0,
+            "first": "08:00",
+            "last": "14:00",
+            "workday": true
+          },
+          "2026-09-24": {
+            "status": "remote_active",
+            "connected_hours": 24.0,
+            "active_hours": 4.0,
+            "first": "10:00",
+            "last": "14:00",
+            "workday": true
+          },
+          "2026-09-25": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-09-26": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-09-27": {
+            "status": "remote_active",
+            "connected_hours": 18.0,
+            "active_hours": 6.0,
+            "first": "08:00",
+            "last": "14:00",
+            "workday": true
+          },
+          "2026-09-28": {
+            "status": "remote_active",
+            "connected_hours": 22.0,
+            "active_hours": 4.0,
+            "first": "10:00",
+            "last": "14:00",
+            "workday": true
+          },
+          "2026-09-29": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 4.0,
+            "first": "10:00",
+            "last": "14:00",
+            "workday": true
+          },
+          "2026-09-30": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 6.0,
+            "first": "08:00",
+            "last": "14:00",
+            "workday": true
+          },
+          "2026-10-01": {
+            "status": "remote_active",
+            "connected_hours": 22.0,
+            "active_hours": 4.0,
+            "first": "10:00",
+            "last": "14:00",
+            "workday": true
+          },
+          "2026-10-02": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-10-03": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          }
+        },
+        "metrics": {
+          "workdays": 10,
+          "days_connected": 10,
+          "days_remote": 10,
+          "days_office": 0,
+          "days_active": 10,
+          "avg_connected_hours": 21.0,
+          "avg_active_hours": 5.2,
+          "avg_first": "08:48",
+          "avg_last": "14:00",
+          "offday_active_hours": 0,
+          "last_seen": "2026-10-02 00:00"
+        }
+      },
+      {
+        "name": "Omer Haddad",
+        "department": "Operations",
+        "identities": [
+          {
+            "label": "LT-OHADDAD",
+            "type": "anyconnect",
+            "location": "remote",
+            "baseline_per_hour": 478.5,
+            "signal": "background"
+          },
+          {
+            "label": "omer@contoso.com",
+            "type": "directory_user",
+            "location": "unknown",
+            "baseline_per_hour": 490.0,
+            "signal": "background"
+          }
+        ],
+        "signal": "background",
+        "days": {
+          "2026-09-20": {
+            "status": "remote_connected",
+            "connected_hours": 24.0,
+            "active_hours": null,
+            "first": null,
+            "last": null,
+            "workday": true
+          },
+          "2026-09-21": {
+            "status": "remote_connected",
+            "connected_hours": 24.0,
+            "active_hours": null,
+            "first": null,
+            "last": null,
+            "workday": true
+          },
+          "2026-09-22": {
+            "status": "remote_connected",
+            "connected_hours": 24.0,
+            "active_hours": null,
+            "first": null,
+            "last": null,
+            "workday": true
+          },
+          "2026-09-23": {
+            "status": "remote_connected",
+            "connected_hours": 24.0,
+            "active_hours": null,
+            "first": null,
+            "last": null,
+            "workday": true
+          },
+          "2026-09-24": {
+            "status": "remote_connected",
+            "connected_hours": 24.0,
+            "active_hours": null,
+            "first": null,
+            "last": null,
+            "workday": true
+          },
+          "2026-09-25": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": null,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-09-26": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": null,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-09-27": {
+            "status": "remote_connected",
+            "connected_hours": 24.0,
+            "active_hours": null,
+            "first": null,
+            "last": null,
+            "workday": true
+          },
+          "2026-09-28": {
+            "status": "remote_connected",
+            "connected_hours": 24.0,
+            "active_hours": null,
+            "first": null,
+            "last": null,
+            "workday": true
+          },
+          "2026-09-29": {
+            "status": "remote_connected",
+            "connected_hours": 24.0,
+            "active_hours": null,
+            "first": null,
+            "last": null,
+            "workday": true
+          },
+          "2026-09-30": {
+            "status": "remote_connected",
+            "connected_hours": 24.0,
+            "active_hours": null,
+            "first": null,
+            "last": null,
+            "workday": true
+          },
+          "2026-10-01": {
+            "status": "remote_connected",
+            "connected_hours": 24.0,
+            "active_hours": null,
+            "first": null,
+            "last": null,
+            "workday": true
+          },
+          "2026-10-02": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": null,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-10-03": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": null,
+            "first": null,
+            "last": null,
+            "workday": false
+          }
+        },
+        "metrics": {
+          "workdays": 10,
+          "days_connected": 10,
+          "days_remote": 10,
+          "days_office": 0,
+          "days_active": null,
+          "avg_connected_hours": 24.0,
+          "avg_active_hours": null,
+          "avg_first": null,
+          "avg_last": null,
+          "offday_active_hours": null,
+          "last_seen": "2026-10-02 00:00"
+        }
+      },
+      {
+        "name": "Tal Mizrahi",
+        "department": "Operations",
+        "identities": [
+          {
+            "label": "tal@contoso.com",
+            "type": "directory_user",
+            "location": "unknown",
+            "baseline_per_hour": 0.0,
+            "signal": "ok"
+          },
+          {
+            "label": "LT-TMIZRAHI",
+            "type": "anyconnect",
+            "location": "remote",
+            "baseline_per_hour": 30.0,
+            "signal": "ok"
+          },
+          {
+            "label": "LT-TMIZRAHI",
+            "type": "ztna_client",
+            "location": "remote",
+            "baseline_per_hour": 0.0,
+            "signal": "ok"
+          }
+        ],
+        "signal": "ok",
+        "days": {
+          "2026-09-20": {
+            "status": "seen_active",
+            "connected_hours": 10.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-21": {
+            "status": "remote_active",
+            "connected_hours": 22.0,
+            "active_hours": 12.0,
+            "first": "06:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-22": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-23": {
+            "status": "seen_active",
+            "connected_hours": 10.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-24": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 12.0,
+            "first": "06:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-25": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-09-26": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-09-27": {
+            "status": "seen_active",
+            "connected_hours": 10.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-28": {
+            "status": "remote_active",
+            "connected_hours": 22.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-29": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 12.0,
+            "first": "06:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-30": {
+            "status": "seen_active",
+            "connected_hours": 10.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-10-01": {
+            "status": "remote_active",
+            "connected_hours": 22.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-10-02": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-10-03": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          }
+        },
+        "metrics": {
+          "workdays": 10,
+          "days_connected": 10,
+          "days_remote": 6,
+          "days_office": 0,
+          "days_active": 10,
+          "avg_connected_hours": 16.6,
+          "avg_active_hours": 10.6,
+          "avg_first": "07:24",
+          "avg_last": "18:00",
+          "offday_active_hours": 0,
+          "last_seen": "2026-10-02 00:00"
+        }
+      },
+      {
+        "name": "Eitan Katz",
+        "department": "Sales",
+        "identities": [
+          {
+            "label": "LT-EKATZ",
+            "type": "anyconnect",
+            "location": "remote",
+            "baseline_per_hour": 32.5,
+            "signal": "ok"
+          },
+          {
+            "label": "eitan@contoso.com",
+            "type": "directory_user",
+            "location": "unknown",
+            "baseline_per_hour": 0.0,
+            "signal": "ok"
+          },
+          {
+            "label": "LT-EKATZ",
+            "type": "ztna_client",
+            "location": "remote",
+            "baseline_per_hour": 0.0,
+            "signal": "ok"
+          }
+        ],
+        "signal": "ok",
+        "days": {
+          "2026-09-20": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 10.0,
+            "first": "06:00",
+            "last": "16:00",
+            "workday": true
+          },
+          "2026-09-21": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 8.0,
+            "first": "08:00",
+            "last": "16:00",
+            "workday": true
+          },
+          "2026-09-22": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": true
+          },
+          "2026-09-23": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": true
+          },
+          "2026-09-24": {
+            "status": "remote_active",
+            "connected_hours": 24.0,
+            "active_hours": 8.0,
+            "first": "08:00",
+            "last": "16:00",
+            "workday": true
+          },
+          "2026-09-25": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-09-26": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-09-27": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 8.0,
+            "first": "08:00",
+            "last": "16:00",
+            "workday": true
+          },
+          "2026-09-28": {
+            "status": "remote_active",
+            "connected_hours": 24.0,
+            "active_hours": 10.0,
+            "first": "06:00",
+            "last": "16:00",
+            "workday": true
+          },
+          "2026-09-29": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 10.0,
+            "first": "06:00",
+            "last": "16:00",
+            "workday": true
+          },
+          "2026-09-30": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 8.0,
+            "first": "08:00",
+            "last": "16:00",
+            "workday": true
+          },
+          "2026-10-01": {
+            "status": "remote_active",
+            "connected_hours": 22.0,
+            "active_hours": 8.0,
+            "first": "08:00",
+            "last": "16:00",
+            "workday": true
+          },
+          "2026-10-02": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-10-03": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          }
+        },
+        "metrics": {
+          "workdays": 10,
+          "days_connected": 8,
+          "days_remote": 8,
+          "days_office": 0,
+          "days_active": 8,
+          "avg_connected_hours": 21.2,
+          "avg_active_hours": 8.8,
+          "avg_first": "07:15",
+          "avg_last": "16:00",
+          "offday_active_hours": 0,
+          "last_seen": "2026-10-02 00:00"
+        }
+      },
+      {
+        "name": "Shira Golan",
+        "department": "Sales",
+        "identities": [
+          {
+            "label": "LT-SGOLAN",
+            "type": "anyconnect",
+            "location": "remote",
+            "baseline_per_hour": 26.8,
+            "signal": "ok"
+          },
+          {
+            "label": "shira@contoso.com",
+            "type": "directory_user",
+            "location": "unknown",
+            "baseline_per_hour": 0.0,
+            "signal": "ok"
+          },
+          {
+            "label": "LT-SGOLAN",
+            "type": "ztna_client",
+            "location": "remote",
+            "baseline_per_hour": 0.0,
+            "signal": "ok"
+          }
+        ],
+        "signal": "ok",
+        "days": {
+          "2026-09-20": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 12.0,
+            "first": "06:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-21": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 12.0,
+            "first": "06:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-22": {
+            "status": "remote_active",
+            "connected_hours": 20.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-23": {
+            "status": "remote_active",
+            "connected_hours": 22.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-24": {
+            "status": "remote_active",
+            "connected_hours": 24.0,
+            "active_hours": 10.0,
+            "first": "08:00",
+            "last": "18:00",
+            "workday": true
+          },
+          "2026-09-25": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-09-26": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-09-27": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": true
+          },
+          "2026-09-28": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": true
+          },
+          "2026-09-29": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": true
+          },
+          "2026-09-30": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": true
+          },
+          "2026-10-01": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": true
+          },
+          "2026-10-02": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          },
+          "2026-10-03": {
+            "status": "none",
+            "connected_hours": 0.0,
+            "active_hours": 0.0,
+            "first": null,
+            "last": null,
+            "workday": false
+          }
+        },
+        "metrics": {
+          "workdays": 10,
+          "days_connected": 5,
+          "days_remote": 5,
+          "days_office": 0,
+          "days_active": 5,
+          "avg_connected_hours": 21.2,
+          "avg_active_hours": 10.8,
+          "avg_first": "07:12",
+          "avg_last": "18:00",
+          "offday_active_hours": 0,
+          "last_seen": "2026-09-25 00:00"
+        }
+      }
+    ]
+  }
+}
